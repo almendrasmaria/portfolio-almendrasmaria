@@ -21,7 +21,7 @@ function Contact() {
       </p>
 
       <form
-        action="https://formspree.io/f/TU_FORM_ID"
+        action="https://formspree.io/f/mjyvbbnv"
         method="POST"
         className="mt-8"
       >
