@@ -2,8 +2,8 @@ import { useState } from 'react'
 
 const LINKS = [
   { id: 'inicio', label: 'Inicio' },
-  { id: 'proyectos', label: 'Proyectos' },
   { id: 'experiencia', label: 'Experiencia' },
+  { id: 'proyectos', label: 'Proyectos' },
 ]
 
 function Navbar() {
