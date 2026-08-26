@@ -24,8 +24,14 @@
 
 body {
   font-family: var(--font-sans);
-  background: #ffffff;
-  color: #08060d;
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #171717 45%,
+    #5c2836 100%
+  );
+  background-attachment: fixed;
+  color: #ffffff;
 }
 
 @keyframes blink-cursor {

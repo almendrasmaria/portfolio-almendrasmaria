@@ -45,8 +45,11 @@ function Experience() {
   const [ref, inView] = useInView({ threshold: 0.2 })
 
   return (
-    <section id="experiencia" className="mx-auto max-w-[814px] px-6 py-16">
-      <h2 className="text-xs font-medium uppercase tracking-widest text-neutral-400">
+    <section
+      id="experiencia"
+      className="mx-auto max-w-[814px] scroll-mt-20 px-6 py-16"
+    >
+      <h2 className="text-sm font-medium uppercase tracking-widest text-neutral-400">
         Experiencia laboral
       </h2>
 
@@ -62,7 +65,7 @@ function Experience() {
               </span>
               {i < EXPERIENCE.length - 1 && (
                 <span
-                  className="mt-1 w-px flex-1 origin-top bg-neutral-200 transition-transform ease-out"
+                  className="mt-1 w-px flex-1 origin-top bg-white/15 transition-transform ease-out"
                   style={{
                     transform: inView ? 'scaleY(1)' : 'scaleY(0)',
                     transitionDuration: '900ms',
@@ -80,14 +83,14 @@ function Experience() {
               }}
             >
               <p className="text-sm text-neutral-400">{job.range}</p>
-              <h3 className="mt-1 text-base font-semibold text-neutral-900 lg:text-lg">
-                {job.company}{' '}
+              <h3 className="mt-1 text-base font-semibold lg:text-lg">
+                <span className="text-brand">{job.company}</span>{' '}
                 <span className="font-normal text-neutral-400">
                   — {job.role}
                 </span>
               </h3>
               <p className="mt-1 text-sm text-neutral-400">{job.tags}</p>
-              <p className="mt-2 text-neutral-600 lg:text-lg">
+              <p className="mt-2 text-neutral-300 lg:text-lg">
                 {job.description}
               </p>
             </div>

@@ -21,8 +21,11 @@ const PROJECTS = [
 
 function Projects() {
   return (
-    <section id="proyectos" className="mx-auto max-w-[814px] px-6 py-16">
-      <h2 className="text-xs font-medium uppercase tracking-widest text-neutral-400">
+    <section
+      id="proyectos"
+      className="mx-auto max-w-[814px] scroll-mt-20 px-6 py-16"
+    >
+      <h2 className="text-sm font-medium uppercase tracking-widest text-neutral-400">
         Mis proyectos
       </h2>
 
