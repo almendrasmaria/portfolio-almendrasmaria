@@ -74,31 +74,24 @@ function Hero() {
         llevar cada proyecto un paso más allá.
       </p>
 
-      <div className="mt-4 flex items-center gap-4">
-        <a
-          href="/cv-maria-almendras.pdf"
-          download
-          className="inline-flex items-center gap-1 text-sm font-medium text-brand underline decoration-brand/40 underline-offset-4 hover:decoration-brand lg:text-base"
-        >
-          Descargar CV ↓
-        </a>
+      <div className="mt-4 flex items-center gap-3">
         <a
           href="https://github.com/almendrasmaria"
           target="_blank"
           rel="noreferrer"
-          aria-label="GitHub"
-          className="text-neutral-400 transition-colors hover:text-white"
+          className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-neutral-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-200 hover:shadow-[0_0_25px_-5px_rgba(255,255,255,0.5)]"
         >
-          <FaGithub className="h-5 w-5" />
+          <FaGithub className="h-4 w-4" />
+          GitHub
         </a>
         <a
           href="https://www.linkedin.com/in/marialmendras/"
           target="_blank"
           rel="noreferrer"
-          aria-label="LinkedIn"
-          className="text-neutral-400 transition-colors hover:text-white"
+          className="inline-flex items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-medium text-white transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_0_25px_-5px_rgba(191,86,116,0.8)]"
         >
-          <FaLinkedin className="h-5 w-5" />
+          <FaLinkedin className="h-4 w-4" />
+          LinkedIn
         </a>
       </div>
     </section>
