@@ -73,7 +73,7 @@ function Hero() {
         primer día.
       </p>
 
-      <div className="mt-4 flex items-center gap-3">
+      <div className="mt-4 flex flex-wrap items-center gap-3">
         <a
           href="https://github.com/almendrasmaria"
           target="_blank"
