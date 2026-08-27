@@ -13,7 +13,7 @@ const ITEMS = [
     title: 'Backend Developer',
     org: 'Contenidos Públicos S.E.',
     description:
-      'Diseño y mantenimiento de lógica de negocio backend en Java, aplicando POO y arquitectura en capas. Implementé funcionalidades de punta a punta, optimicé consultas sobre SQL Server y resolví incidencias técnicas junto al equipo.',
+      'Diseño y mantenimiento de lógica de negocio backend, aplicando POO y arquitectura en capas. Implementé funcionalidades de punta a punta, optimicé consultas sobre bases de datos relacionales y resolví incidencias técnicas junto al equipo.',
   },
 ]
 
