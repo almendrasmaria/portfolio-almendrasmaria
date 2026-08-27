@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const LINKS = [
   { id: 'inicio', label: 'Inicio' },
@@ -6,8 +6,30 @@ const LINKS = [
   { id: 'proyectos', label: 'Proyectos' },
 ]
 
+const SECTION_IDS = [...LINKS.map((link) => link.id), 'contacto']
+
 function Navbar() {
   const [active, setActive] = useState('inicio')
+
+  useEffect(() => {
+    const sections = SECTION_IDS.map((id) => document.getElementById(id)).filter(
+      Boolean,
+    )
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id)
+          }
+        })
+      },
+      { rootMargin: '-40% 0px -55% 0px' },
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <header className="sticky top-4 z-50 mt-4 flex justify-center px-4">
