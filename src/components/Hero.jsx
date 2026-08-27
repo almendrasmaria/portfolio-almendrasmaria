@@ -41,7 +41,9 @@ function Hero() {
           <img
             src="/avatar.jpeg"
             alt="Maria Almendras"
-            className="h-full w-full scale-110 object-cover object-[50%_30%]"
+            draggable={false}
+            onContextMenu={(e) => e.preventDefault()}
+            className="h-full w-full scale-110 object-cover object-[50%_30%] select-none"
           />
         </div>
         <span className="glow-border absolute -bottom-2 -right-4 inline-flex items-center gap-2 rounded-full bg-white/10 py-1.5 pl-2 pr-3 text-sm font-medium text-white shadow-lg backdrop-blur-sm light:bg-white light:text-neutral-900 light:shadow-md">
