@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { FiCheck, FiSend } from 'react-icons/fi'
+import useInView from '../hooks/useInView'
 
 const FORM_ENDPOINT = 'https://formspree.io/f/mjyvbbnv'
 
@@ -10,6 +11,7 @@ const FIELD_CLASS =
 
 function Contact() {
   const [status, setStatus] = useState('idle')
+  const [ref, inView] = useInView({ threshold: 0.2 })
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -51,6 +53,15 @@ function Contact() {
         Escribime, con gusto lo charlamos.
       </p>
 
+      <div
+        ref={ref}
+        className="opacity-0 transition-all ease-out"
+        style={{
+          opacity: inView ? 1 : 0,
+          transform: inView ? 'translateY(0)' : 'translateY(24px)',
+          transitionDuration: '600ms',
+        }}
+      >
       {status === 'success' ? (
         <div className="mt-8 rounded-lg border border-brand/30 bg-brand/10 px-5 py-4">
           <p className="flex items-center gap-2 font-medium text-white light:text-neutral-900">
@@ -122,6 +133,7 @@ function Contact() {
           </button>
         </form>
       )}
+      </div>
     </section>
   )
 }

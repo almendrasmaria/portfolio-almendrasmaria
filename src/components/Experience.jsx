@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import useInView from '../hooks/useInView'
 
 const ITEMS = [
   {
@@ -16,28 +16,6 @@ const ITEMS = [
       'Diseño y mantenimiento de lógica de negocio backend, aplicando POO y arquitectura en capas. Implementé funcionalidades de punta a punta, optimicé consultas sobre bases de datos relacionales y resolví incidencias técnicas junto al equipo.',
   },
 ]
-
-function useInView(options) {
-  const ref = useRef(null)
-  const [inView, setInView] = useState(false)
-
-  useEffect(() => {
-    const node = ref.current
-    if (!node) return undefined
-
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setInView(true)
-        observer.disconnect()
-      }
-    }, options)
-
-    observer.observe(node)
-    return () => observer.disconnect()
-  }, [options])
-
-  return [ref, inView]
-}
 
 function Experience() {
   const [ref, inView] = useInView({ threshold: 0.2 })

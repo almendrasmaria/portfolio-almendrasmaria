@@ -1,3 +1,4 @@
+import useInView from '../hooks/useInView'
 import ProjectCard from './ProjectCard'
 
 const PROJECTS = [
@@ -20,6 +21,8 @@ const PROJECTS = [
 ]
 
 function Projects() {
+  const [ref, inView] = useInView({ threshold: 0.15 })
+
   return (
     <section
       id="proyectos"
@@ -32,9 +35,20 @@ function Projects() {
         <span className="h-px flex-1 bg-white/10 light:bg-black/10" />
       </div>
 
-      <div className="mt-6 flex flex-col gap-4">
-        {PROJECTS.map((project) => (
-          <ProjectCard key={project.title} {...project} />
+      <div ref={ref} className="mt-6 flex flex-col gap-4">
+        {PROJECTS.map((project, i) => (
+          <div
+            key={project.title}
+            className="opacity-0 transition-all ease-out"
+            style={{
+              opacity: inView ? 1 : 0,
+              transform: inView ? 'translateY(0)' : 'translateY(24px)',
+              transitionDuration: '600ms',
+              transitionDelay: `${i * 150}ms`,
+            }}
+          >
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
     </section>
