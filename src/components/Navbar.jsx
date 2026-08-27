@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 const LINKS = [
   { id: 'inicio', label: 'Inicio' },
@@ -32,7 +33,7 @@ function Navbar() {
   }, [])
 
   return (
-    <header className="sticky top-4 z-50 mt-4 flex justify-center px-4">
+    <header className="sticky top-4 z-50 mt-4 flex items-center justify-center gap-2 px-4">
       <nav className="flex items-center gap-1 rounded-full border border-white/10 bg-neutral-900/70 py-2 pl-3 pr-2 shadow-lg shadow-black/20 backdrop-blur light:border-black/10 light:bg-white/80 sm:gap-3 sm:pl-5">
         <a
           href="#inicio"
@@ -75,6 +76,7 @@ function Navbar() {
           Contacto
         </a>
       </nav>
+      <ThemeToggle />
     </header>
   )
 }
