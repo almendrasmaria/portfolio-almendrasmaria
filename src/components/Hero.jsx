@@ -34,27 +34,27 @@ function Hero() {
   return (
     <section
       id="inicio"
-      className="mx-auto max-w-[814px] scroll-mt-20 px-6 pb-16 pt-24"
+      className="mx-auto max-w-4xl scroll-mt-20 px-6 pb-16 pt-24"
     >
       <div className="relative inline-block">
         <div className="h-40 w-40 overflow-hidden rounded-full lg:h-48 lg:w-48">
           <img
             src="/avatar.jpeg"
             alt="Maria Almendras"
-            className="h-full w-full scale-125 object-cover object-[50%_30%]"
+            className="h-full w-full scale-110 object-cover object-[50%_30%]"
           />
         </div>
-        <span className="absolute -bottom-2 -right-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 py-1.5 pl-2 pr-3 text-sm font-medium text-white shadow-lg backdrop-blur-sm">
+        <span className="glow-border absolute -bottom-2 -right-4 inline-flex items-center gap-2 rounded-full bg-white/10 py-1.5 pl-2 pr-3 text-sm font-medium text-white shadow-lg backdrop-blur-sm light:bg-white light:text-neutral-900 light:shadow-md">
           <span className="h-2 w-2 rounded-full bg-green-500" />
           Disponible
         </span>
       </div>
 
-      <h1 className="mt-8 text-3xl font-bold tracking-tight text-white lg:text-5xl">
+      <h1 className="mt-8 text-3xl font-bold tracking-tight text-white lg:text-5xl light:text-neutral-900">
         {typedPrefix}
         <span className="text-brand">{typedName}</span>
         <span
-          className="ml-0.5 inline-block h-[0.85em] w-[3px] translate-y-[0.1em] bg-white"
+          className="ml-0.5 inline-block h-[0.85em] w-[3px] translate-y-[0.1em] bg-white light:bg-neutral-900"
           style={{
             animation: isDone
               ? 'blink-cursor 1s step-end infinite'
@@ -63,15 +63,14 @@ function Hero() {
         />
       </h1>
 
-      <p className="mt-3 text-neutral-300 lg:mt-4 lg:text-lg">
-        <span className="font-semibold text-white">
-          Estudiante de Ingeniería en Informática y desarrolladora Full
-          Stack
-        </span>
-        , enfocada en transformar ideas y desafíos en soluciones digitales
-        eficientes, funcionales y escalables. En constante evolución,
-        buscando nuevos desafíos que me permitan crecer, aportar valor y
-        llevar cada proyecto un paso más allá.
+      <p className="mt-3 text-neutral-300 lg:mt-4 lg:text-lg light:text-neutral-600">
+        <span className="font-semibold text-white light:text-neutral-900">
+          Estudiante de Ingeniería en Informática y desarrolladora full stack.
+        </span>{' '}
+        Trabajo tanto en el backend (Java, Spring Boot) como en el frontend
+        (Angular, React), y disfruto las dos partes por igual. Buscando
+        sumarme a un equipo donde pueda seguir creciendo y aportar desde el
+        primer día.
       </p>
 
       <div className="mt-4 flex items-center gap-3">
@@ -79,7 +78,7 @@ function Hero() {
           href="https://github.com/almendrasmaria"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-neutral-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-200 hover:shadow-[0_0_25px_-5px_rgba(255,255,255,0.5)]"
+          className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-neutral-900 transition-all duration-200 hover:-translate-y-0.5 hover:bg-neutral-200 hover:shadow-[0_0_25px_-5px_rgba(255,255,255,0.5)] light:bg-neutral-900 light:text-white light:hover:bg-neutral-700"
         >
           <FaGithub className="h-4 w-4" />
           GitHub

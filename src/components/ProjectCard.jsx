@@ -24,8 +24,8 @@ const TAG_ICONS = {
 
 function ProjectCard({ image, title, description, tags, link }) {
   return (
-    <div className="group flex min-h-64 overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_0_50px_-8px_rgba(191,86,116,0.6)] lg:min-h-72">
-      <div className="hidden w-56 shrink-0 overflow-hidden bg-neutral-100 sm:block lg:w-72">
+    <div className="group flex min-h-64 overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[0_0_50px_-8px_rgba(191,86,116,0.6)] lg:min-h-72 light:border-black/10 light:bg-black/[0.03]">
+      <div className="hidden w-64 shrink-0 overflow-hidden bg-neutral-100 sm:block lg:w-80">
         {image ? (
           <img
             src={image}
@@ -42,25 +42,22 @@ function ProjectCard({ image, title, description, tags, link }) {
           href={link}
           target="_blank"
           rel="noreferrer"
-          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-brand transition-colors hover:bg-brand/10"
+          className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-brand transition-colors hover:bg-brand/10 light:border-black/10"
         >
           ↗
         </a>
 
-        <h3 className="pr-10 text-lg font-semibold text-white lg:text-xl">
+        <h3 className="pr-10 text-lg font-semibold text-white lg:text-2xl light:text-neutral-900">
           {title}
         </h3>
-        <p className="mt-2 text-base text-neutral-400 lg:text-lg">
-          {description}
-        </p>
 
-        <div className="mt-4 flex flex-wrap gap-2">
+        <div className="mt-2 flex flex-wrap gap-2">
           {tags.map((tag) => {
             const Icon = TAG_ICONS[tag]
             return (
               <span
                 key={tag}
-                className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-sm text-neutral-300"
+                className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-neutral-300 light:bg-black/5 light:text-neutral-700"
               >
                 {Icon && <Icon className="h-3.5 w-3.5" />}
                 {tag}
@@ -68,6 +65,10 @@ function ProjectCard({ image, title, description, tags, link }) {
             )
           })}
         </div>
+
+        <p className="mt-4 text-base text-neutral-400 light:text-neutral-500">
+          {description}
+        </p>
       </div>
     </div>
   )

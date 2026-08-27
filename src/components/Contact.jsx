@@ -4,9 +4,9 @@ import { FiCheck, FiSend } from 'react-icons/fi'
 const FORM_ENDPOINT = 'https://formspree.io/f/mjyvbbnv'
 
 const FIELD_LABEL_CLASS =
-  'text-xs font-medium uppercase tracking-widest text-neutral-400'
+  'text-xs font-medium uppercase tracking-widest text-neutral-400 light:text-neutral-500'
 const FIELD_CLASS =
-  'mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-white placeholder-neutral-500 outline-none backdrop-blur-sm transition-colors focus:border-brand'
+  'mt-2 w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-white placeholder-neutral-500 outline-none backdrop-blur-sm transition-colors focus:border-brand light:border-black/10 light:bg-black/[0.03] light:text-neutral-900 light:placeholder-neutral-400'
 
 function Contact() {
   const [status, setStatus] = useState('idle')
@@ -37,24 +37,27 @@ function Contact() {
   return (
     <section
       id="contacto"
-      className="mx-auto max-w-[814px] scroll-mt-20 px-6 py-16"
+      className="mx-auto max-w-4xl scroll-mt-20 px-6 py-16"
     >
-      <h2 className="text-sm font-medium uppercase tracking-widest text-neutral-400">
-        Contacto
-      </h2>
+      <div className="flex items-center gap-4">
+        <h2 className="whitespace-nowrap text-sm font-medium uppercase tracking-widest text-neutral-400 light:text-neutral-500">
+          Contacto
+        </h2>
+        <span className="h-px flex-1 bg-white/10 light:bg-black/10" />
+      </div>
 
-      <p className="mt-4 text-neutral-300 lg:text-lg">
+      <p className="mt-4 text-neutral-300 lg:text-lg light:text-neutral-600">
         ¿Tenés un proyecto en mente o una posición donde pueda encajar?
         Escribime, con gusto lo charlamos.
       </p>
 
       {status === 'success' ? (
         <div className="mt-8 rounded-lg border border-brand/30 bg-brand/10 px-5 py-4">
-          <p className="flex items-center gap-2 font-medium text-white">
+          <p className="flex items-center gap-2 font-medium text-white light:text-neutral-900">
             <FiCheck className="h-5 w-5 text-brand" />
             ¡Gracias! Tu mensaje fue enviado.
           </p>
-          <p className="mt-1 text-sm text-neutral-300">
+          <p className="mt-1 text-sm text-neutral-300 light:text-neutral-600">
             Te voy a responder apenas lo lea.
           </p>
         </div>
@@ -97,7 +100,7 @@ function Contact() {
               id="message"
               name="message"
               rows={4}
-              placeholder="¿En qué puedo ayudarte?"
+              placeholder="Dejá tu consulta acá..."
               required
               className={`${FIELD_CLASS} resize-none`}
             />

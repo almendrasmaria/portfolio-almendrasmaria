@@ -11,14 +11,14 @@ function Navbar() {
 
   return (
     <header className="sticky top-4 z-50 mt-4 flex justify-center px-4">
-      <nav className="flex items-center gap-3 rounded-full border border-white/10 bg-neutral-900/70 py-2 pl-5 pr-2 shadow-lg shadow-black/20 backdrop-blur">
+      <nav className="flex items-center gap-3 rounded-full border border-white/10 bg-neutral-900/70 py-2 pl-5 pr-2 shadow-lg shadow-black/20 backdrop-blur light:border-black/10 light:bg-white/80">
         <a
           href="#inicio"
           onClick={() => setActive('inicio')}
           className="hidden items-center gap-2 pr-2 sm:flex"
         >
-          <span className="h-2.5 w-2.5 rounded-full bg-white" />
-          <span className="text-sm font-medium text-white">Maria A.</span>
+          <span className="h-2.5 w-2.5 rounded-full bg-white light:bg-neutral-900" />
+          <span className="text-sm font-medium text-white light:text-neutral-900">Maria A.</span>
         </a>
 
         <div className="flex items-center gap-2">
@@ -29,8 +29,8 @@ function Navbar() {
               onClick={() => setActive(link.id)}
               className={`flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                 active === link.id
-                  ? 'bg-brand/20 text-white'
-                  : 'text-neutral-400 hover:text-white'
+                  ? 'bg-brand/20 text-white light:text-neutral-900'
+                  : 'text-neutral-400 hover:text-white light:text-neutral-500 light:hover:text-neutral-900'
               }`}
             >
               {active === link.id && (

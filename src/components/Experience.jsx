@@ -45,13 +45,13 @@ function Experience() {
   return (
     <section
       id="experiencia"
-      className="mx-auto max-w-[814px] scroll-mt-20 px-6 py-16"
+      className="mx-auto max-w-4xl scroll-mt-20 px-6 py-16"
     >
       <div className="flex items-center gap-4">
-        <h2 className="whitespace-nowrap text-sm font-medium uppercase tracking-widest text-neutral-400">
+        <h2 className="whitespace-nowrap text-sm font-medium uppercase tracking-widest text-neutral-400 light:text-neutral-500">
           Experiencia laboral
         </h2>
-        <span className="h-px flex-1 bg-white/10" />
+        <span className="h-px flex-1 bg-white/10 light:bg-black/10" />
       </div>
 
       <div ref={ref} className="mt-6">
@@ -66,7 +66,7 @@ function Experience() {
               </span>
               {i < ITEMS.length - 1 && (
                 <span
-                  className="mt-1 w-px flex-1 origin-top bg-white/15 transition-transform ease-out"
+                  className="mt-1 w-px flex-1 origin-top bg-white/15 transition-transform ease-out light:bg-black/15"
                   style={{
                     transform: inView ? 'scaleY(1)' : 'scaleY(0)',
                     transitionDuration: '900ms',
@@ -83,12 +83,12 @@ function Experience() {
                 transitionDelay: `${i * 200}ms`,
               }}
             >
-              <p className="text-sm text-neutral-400">{item.range}</p>
+              <p className="text-sm text-neutral-400 light:text-neutral-500">{item.range}</p>
               <h3 className="mt-1 text-lg font-semibold text-brand lg:text-xl">
                 {item.title}
               </h3>
-              <p className="mt-0.5 text-sm text-neutral-400">{item.org}</p>
-              <p className="mt-2 text-neutral-300 lg:text-lg">
+              <p className="mt-0.5 text-sm text-neutral-400 light:text-neutral-500">{item.org}</p>
+              <p className="mt-2 text-neutral-300 lg:text-lg light:text-neutral-600">
                 {item.description}
               </p>
             </div>
