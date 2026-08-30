@@ -7,8 +7,8 @@ const PROJECTS = [
     description:
       'SaaS de gestión de turnos con foco en backend (Java 21 + Spring Boot). Dashboard multitenancy con reservas públicas, recordatorios automáticos por WhatsApp y persistencia en PostgreSQL. Containerizado con Docker.',
     tags: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular', 'Docker'],
-    image: '/projects/timora.png',
-    link: '#',
+    image: '/projects/timora.gif',
+    link: 'https://timora-web.vercel.app/',
   },
   {
     title: 'Patitas Up',
