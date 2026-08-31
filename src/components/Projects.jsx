@@ -15,8 +15,8 @@ const PROJECTS = [
     description:
       'Plataforma de adopción responsable que conecta animales con personas interesadas en brindarles un hogar. Desarrollada con Next.js, React y TypeScript, con UI responsive en Tailwind CSS y componentes accesibles con Radix UI.',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'REST APIs'],
-    image: '/projects/patitasup.png',
-    link: '#',
+    image: '/projects/patitasup.gif',
+    link: 'https://patitasup.vercel.app',
   },
 ]
 
