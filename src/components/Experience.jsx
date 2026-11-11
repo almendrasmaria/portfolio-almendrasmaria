@@ -9,7 +9,7 @@ const ITEMS = [
       'Desarrollo y mantenimiento de aplicaciones web colaborativas, trabajando tanto en la lógica de negocio como en la interfaz. Integro servicios REST/JSON entre frontend y backend, resuelvo issues y participo en code reviews y Pull Requests junto al equipo.',
   },
   {
-    range: 'Mar 2023 — Feb 2025',
+    range: 'Mar 2023 — Nov 2025',
     title: 'Backend Developer',
     org: 'Contenidos Públicos S.E.',
     description:
